@@ -1,18 +1,20 @@
 @charset "utf-8";
 
 body {
-  text-align: center;
-  font-family: sans-serif; }
+  font-family: sans-serif; 
+}
+
+.container {
+  width: 55%;
+  margin: 0 auto;
+}
 
 h1 {
-  color: rgba(0, 0, 0, .3);
   font-weight: bold;
   font-size: 32px;
-  letter-spacing: -1px;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  padding: 350px 0 10px;
-  margin: 0; }
+  text-align: center;
+}
 
 @-webkit-keyframes welcome {
   from {
