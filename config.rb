@@ -1,38 +1,21 @@
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+# Reload the browser automatically whenever files change
+activate :livereload
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
+###
+# Compass
+###
+compass_config do |config|
+  config.output_style = :compressed
+end
 
 ###
 # Helpers
 ###
-
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
-
-# Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def get_url
+    absolute_prefix + url_prefix
+  end
+end
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
@@ -42,6 +25,7 @@ activate :directory_indexes
 # Build-specific configuration
 configure :build do
   page "/quiz", :layout => "quiz.css.scss"
+  page "/meme", :layout => "main.scss"
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
@@ -49,7 +33,7 @@ configure :build do
   # activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   # activate :relative_assets
