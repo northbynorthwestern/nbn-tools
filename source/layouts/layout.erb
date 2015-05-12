@@ -8,11 +8,9 @@
     
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "NBN Web Tools" %></title>
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,400italic,600,600italic,700,700italic,200italic,300italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300italic,300,400italic,500,500italic,700,900' rel='stylesheet' type='text/css'>
-    
-    <%= stylesheet_link_tag "normalize", "styles" %>
-    <%= javascript_include_tag  "script" %>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "normalize", "index" %>
+    <%= javascript_include_tag  "vendor/jquery", "script" %>
   </head>
   
   <body class="<%= page_classes %>">
