@@ -1,4 +1,7 @@
 @charset "utf-8";
+$light-purple: #fae3ff;
+$dark-purple: #59006c;
+$almost-white: #f6f6f6;
 
 body {
   font-family: 'Lato', sans-serif;
@@ -15,7 +18,7 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: #f6f6f6;
+	background: $almost-white;
 	z-index: 10000;
 	height: 90px;
 	overflow: hidden;
@@ -35,11 +38,10 @@ body {
 .cbp-af-header nav {
 	display: inline-block;
 	position: relative;
-}
 
-.cbp-af-header #header-title,
-.cbp-af-header nav a {
-	line-height: 90px;
+	a {
+		line-height: 90px;
+	}
 }
 
 .cbp-af-header #header-title {
@@ -49,21 +51,23 @@ body {
 	font-size: 3em;
 	margin: 0;
 	float: left;
+	line-height: 90px;
 }
 
 .cbp-af-header nav {
 	float: right;
-}
 
-.cbp-af-header nav a {
-	color: #aaa;
-	font-weight: 700;
-	margin: 0 0 0 20px;
-	font-size: 1.4em;
-}
+	a {
+		color: $dark-purple;
+		font-weight: 700;
+		margin: 0 0 0 20px;
+		font-size: 1.4em;
+		text-decoration: none;
 
-.cbp-af-header nav a:hover {
-	color: #333;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .clearfix {
@@ -73,9 +77,14 @@ body {
 	padding: 2.875em 1.875em 1.875em;
 }
 
+h1 {
+	font-size: 2em;
+	margin-top: 1em;
+}
+
 h2 {
-	margin: 0 0 0.3em;
-	padding: 1em 0 0.5em;
+	margin: 1em 0 0.3em;
+	padding: 0em 0 0.5em;
 	border-bottom: 1px solid #ddd;
 	font-size: 1.8em;
 	font-weight: 300;
@@ -85,17 +94,47 @@ h2 {
 	margin-bottom: 1em;
 
 	span {
-		background-color: #fae3ff;
+		background-color: $light-purple;
 		padding: 5px;
 		cursor: pointer;
+		-webkit-transition: .2s;
+		-moz-transition: .2s;
+		-o-transition: .2s;
+		transition: .2s;
+		&:hover {
+			background-color: $dark-purple;
+			color: #fff;
+		}
 	}
 }
 
 ul {
 	display: none;
+	padding: 2em;
+	background-color: $almost-white;
+
+	li {
+		font-size: 1em;
+		font-weight: 300;
+		line-height: 1.35;
+
+		a {
+			font-size: 1em !important;
+		}
+	}
 }
 
 .section {
+	a {
+  		text-decoration: none;
+		font-weight: 600;
+		font-size: 1.3em;
+		color: $dark-purple;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
 	p {
 		font-size: 1.1em;
 		font-weight: 300;
@@ -103,4 +142,8 @@ ul {
 		padding: 0em 0 0.5em;
 		margin: 0;
 	}
+}
+
+#contact a {
+	font-size: 1.1em !important;
 }
