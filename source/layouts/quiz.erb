@@ -16,5 +16,8 @@
   
   <body id="top" class="index <%= page_classes %>" style="background-color: #f1f3f2;">
     <%= yield %>
+    <%= javascript_include_tag 'vendor/jquery' %>
+    <%= javascript_include_tag 'quiz/tabletop' %>
+    <%= javascript_include_tag 'quiz/getdata' %>
   </body>
 </html>
