@@ -26,16 +26,19 @@ MEME.MemeEditorView = Backbone.View.extend({
 
     // Build text alignment options:
     if (d.textAlignOpts && d.textAlignOpts.length) {
+      $('#text-align').show().find('option').remove();
       $('#text-align').append(buildOptions(d.textAlignOpts)).show();
     }
 
     // Build font size options:
     if (d.fontSizeOpts && d.fontSizeOpts.length) {
+      $('#font-size').show().find('option').remove();
       $('#font-size').append(buildOptions(d.fontSizeOpts)).show();
     }
 
     // Build font family options:
     if (d.fontFamilyOpts && d.fontFamilyOpts.length) {
+      $('#font-family').show().find('option').remove();
       $('#font-family').append(buildOptions(d.fontFamilyOpts)).show();
     }
 
@@ -50,7 +53,7 @@ MEME.MemeEditorView = Backbone.View.extend({
         var color = opt.hasOwnProperty('value') ? opt.value : opt;
         return memo += '<li><label><input class="m-editor__swatch" style="background-color:'+color+'" type="radio" name="overlay" value="'+color+'"></label></li>';
       }, '');
-
+      $('#overlay').show().find('ul li').remove();
       $('#overlay').show().find('ul').append(overlayOpts);
     }
   },

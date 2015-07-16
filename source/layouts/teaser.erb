@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <%= partial "partials/head" %>
+  </head>
+  <body class="<%= page_classes %>">
+    <div class="m-meme">
+      <h1>Teaser Generator</h1>
+      <form class="teaser-config">
+        <input type="radio" name="config" value="single" checked="checked">Single
+        <input type="radio" name="config" value="two-l">Two, large
+        <input type="radio" name="config" value="two-s">Two, small OR Three, equal
+        <input type="radio" name="config" value="three-l">Three, large
+        <input type="radio" name="config" value="three-s">Three, small
+        <input type="radio" name="config" value="four">Four equal
+      </form>
+      <%= partial "partials/editor" %>
+      <%= partial "partials/canvas" %>
+    </div>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'teaser' %>
+    <%= javascript_include_tag 'models/teaser' %>
+  </body>
+</html>
