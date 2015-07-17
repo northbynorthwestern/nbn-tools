@@ -1,0 +1,14 @@
+.credit-label, #credit {
+	display: none;
+}
+
+#overlay ul li:last-child label input {
+	background-image: url('../images/transparent.png');
+	background-position: center; 
+}
+
+@media screen and (min-width: 700px) {
+	.m-canvas {
+		width: 65% !important;
+	}
+}

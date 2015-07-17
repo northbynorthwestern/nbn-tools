@@ -1,7 +1,6 @@
 $(document).ready(function() {
   $('.teaser-config').on('change', function() {
     var teaser_config = $('input[name="config"]:checked', '.teaser-config').val();
-    console.log(teaser_config);
     switch(teaser_config) {
       case "single":
         MEME_SETTINGS.width = 640;

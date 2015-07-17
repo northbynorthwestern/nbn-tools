@@ -51,6 +51,9 @@ MEME.MemeEditorView = Backbone.View.extend({
     if (d.overlayColorOpts && d.overlayColorOpts.length) {
       var overlayOpts = _.reduce(d.overlayColorOpts, function(memo, opt) {
         var color = opt.hasOwnProperty('value') ? opt.value : opt;
+        if (color === "") {
+          color = 'transparent';
+        }
         return memo += '<li><label><input class="m-editor__swatch" style="background-color:'+color+'" type="radio" name="overlay" value="'+color+'"></label></li>';
       }, '');
       $('#overlay').show().find('ul li').remove();

@@ -100,8 +100,11 @@ MEME.MemeCanvasView = Backbone.View.extend({
         ctx.textAlign = 'right';
         x = d.width - padding;
 
-      } else {
+      } else if (d.textAlign == 'left') {
         ctx.textAlign = 'left';
+      } else {
+        ctx.textAlign = 'bottom';
+        y = d.height - d.height / 3.5;
       }
 
       var words = d.headlineText.split(' ');
