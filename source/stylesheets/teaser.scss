@@ -1,3 +1,6 @@
+@charset "utf-8";
+$dark-purple: #59006c;
+
 .credit-label, #credit {
 	display: none;
 }
@@ -5,6 +8,29 @@
 #overlay ul li:last-child label input {
 	background-image: url('../images/transparent.png');
 	background-position: center; 
+}
+
+.teaser-config {
+	overflow: auto;
+	margin-bottom: 2em;
+}
+
+.teaser-option {
+    float: left;
+    margin-right: 1em;
+    img {
+    	height: 50px;
+    }
+}
+
+a {
+	font-weight: 600;
+	color: $dark-purple;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 @media screen and (min-width: 700px) {
