@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "teaser" %>
+    <%= partial "partials/head" %>
+  </head>
+  <body class="<%= page_classes %>">
+    <div class="m-meme">
+      <h1>Thumbnail Generator</h1>
+      <p>A thumbnail is an image associated with every story published in Today's Scoop on the <a href="http://northbynorthwestern.com" target="_blank">homepage</a>.</p>
+      <%= partial "partials/editor" %>
+      <%= partial "partials/canvas" %>
+    </div>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'thumbnail' %>
+  </body>
+</html>

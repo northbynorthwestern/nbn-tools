@@ -1,0 +1,64 @@
+var MEME_SETTINGS = {
+  creditText: '', // Default "credits" text.
+  creditSize: 12, // Font size for credit text.
+  downloadName: 'thumbnail', // The name of the downloaded image file (will have a ".png" extension added).
+  fontColor: '#444135', // Universal font color.
+  fontColorOpts: ['#000', '#3d004a', '#777', '#fafafa', '#444135'],
+
+  // Universal font family for texts:
+  // Note that you'll need to included quoted font names as you would in CSS, ie: '"Knockout 28 B"'.
+  fontFamily: 'Open Sans',
+  // Font family options: set to empty array to disable font selector.
+  // These options may also be formatted as {text:'Knockout', value:'"Knockout 28 B"'}.
+  fontFamilyOpts: ['Open Sans', 'Bitter', 'Montserrat', 'Oswald'],
+  
+  // Font size of main headline:
+  fontSize: 14,
+  // Font size options: set to empty array to disable font-size selector.
+  fontSizeOpts: [
+    {text: 'Small text', value: 8},
+    {text: 'Medium text', value: 10},
+    {text: 'Medium-large text', value: 12},
+    {text: 'Large text', value: 14}
+  ],
+
+  headlineText: '', // Default headline text.
+  height: 170, // Canvas rendering height.
+  imageScale: 1, // Background image scale.
+  imageSrc: '', // Default background image path. MUST reside on host domain, or use base64 data.
+  overlayAlpha: 0.5, // Opacity of image overlay.
+
+  // Image overlay color, or blank ('') for no overlay:
+  overlayColor: '#000',
+  // Overlay color options: set to empty array to disable overlay options selector.
+  overlayColorOpts: ['#000', '#3d004a', '#777', ''],
+  paddingRatio: 0.05, // Percentage of canvas width to use as edge padding.
+  
+  // Text alignment: valid settings are "left", "center", and "right".
+  textAlign: 'left',
+  // Text alignment options: set to empty array to disable alignment picker.
+  textAlignOpts: [
+    {text: 'Align left', value: 'left'}, 
+    {text: 'Align center', value: 'center'},
+    {text: 'Align right', value: 'right'},
+    {text: 'Align bottom', value: 'bottom'}
+  ],
+
+  textShadow: false, // Text shadow toggle.
+  textShadowEdit: true, // Toggles text shadow control within the editor.
+  watermarkAlpha: 1, // Opacity of watermark image.
+  watermarkMaxWidthRatio: 0.25, // Maximum allowed width of watermark (percentage of total canvas width).
+
+  // Path to the watermark image source, or blank for no watermark:
+  // Alternatively, use '<%= asset_data_uri("logo.png") %>' to populate the watermark with base64 data, avoiding Cross-Origin issues.
+  watermarkSrc: "",
+  
+  // Watermark image options: set to empty array to disable watermark picker.
+  // NOTE: only populate the "data" attributes with base64 data when concerned about Cross-Origin requests...
+  // Otherwise, just leave "data" attributes blank and allow images to load from your server.
+  watermarkOpts: [
+    // {text: 'NBN', value: '<%= image_path("logo.png") %>', data: '<%= asset_data_uri("logo.png") %>'}
+  ],
+
+  width: 220 // Canvas rendering width.
+};
